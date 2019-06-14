@@ -12,6 +12,11 @@ def find_version(path):
     raise RuntimeError("Version not found")
 
 
+def get_requirements(filename):
+    with open(filename, "r") as fh:
+        return [l.strip() for l in fh]
+
+
 setup(
     name="osm2gpd",
     version=find_version("osm2gpd/__init__.py"),
@@ -19,5 +24,9 @@ setup(
     maintainer="Nick Hand",
     maintainer_email="nick.hand@phila.gov",
     description="A Python utility to scrape features from OpenStreetMaps' API and return a geopandas GeoDataFrame",
-    license="GPLV3",
+    license="MIT",
+    packages=["osm2gpd"],
+    install_requires=get_requirements("requirements.txt"),
+    extras_require={"dev": get_requirements("requirements.dev.txt")},
+    python_requires=">=3.6",
 )

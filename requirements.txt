@@ -1,3 +1,4 @@
 requests
 geopandas
-arcgis2geojson
+pandas
+shapely
