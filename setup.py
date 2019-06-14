@@ -23,7 +23,7 @@ setup(
     author="Nick Hand",
     maintainer="Nick Hand",
     maintainer_email="nick.hand@phila.gov",
-    description="A Python utility to scrape features from OpenStreetMaps' API and return a geopandas GeoDataFrame",
+    description="Scrape features from OpenStreetMaps' API and return a geopandas GeoDataFrame",
     license="MIT",
     packages=["osm2gpd"],
     install_requires=get_requirements("requirements.txt"),
