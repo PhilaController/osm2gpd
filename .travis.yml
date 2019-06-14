@@ -37,11 +37,11 @@ deploy:
         secure: JpPXibyQVdWiw2lALLu8CuhFquyfZsVFNzFAjXz/w8jbdw4i67KXck6L4KuZtLshxu0F6gID6z8dw27Ea0mT7Ea/KVezngwn2hE7W55T7vV3sTQn831XLnLIOhG/m7F3LJtGMHBEQ9Z8Stiyfx8D+8xOK5Snf4iAHrAGmjTIruc6+dHh5Gft8icHZOiORc+QN4No9RduI/MKiZVoArS27bXbtcRU5Gbq41p2GVnw7AfhO09Ewl+6BZBydnc+uLaHcqrzXa/vHrEDWKsJlQehhFsNjG0eWbgm0d58T+iVOrBPcF7Saz/D6Oe3hhQD2za/UdRM/R8wHm7L6AIIE4GK9do5cWyVjg25l+gNzHgoylx6yrA2wGrsgb00bp5HZ4sQxqYT6L1xR5mTfZlVi/UdtU5mPKL6Giq4LRK4wx6xro4UtL3vGbtbQ/0XtCvKfP1Unk5UgDqkDztWguEALKYrzz2jItHYxMjJ8j5euV4BroDLp1UMSejoJ9MNem+KDc5yMN2XYq9MgnBtGIzLV3AZ/0YymI4k3l3huBopjMR5Zd8GrzCW7zdvLQRqIkUeYSnzFnN8izGeRS0oB56m8b0+aJOVwlEYWp8vSxTDEZHgWBQ9Jt/kBDWQDadAsMD7I+XOiF1Taz+up/8QRV36wppsexK4aPZJSFjGweG5ZS1J9NM=
       skip_existing: true
       on:
-        #tags: true
+        tags: true
         condition: $TRAVIS_PYTHON_VERSION = "3.7"
     - provider: script
       script: "./deploy_anaconda.sh"
       skip_cleanup: true
       on:
-        #tags: true
+        tags: true
         condition: $TRAVIS_PYTHON_VERSION = "3.7"
